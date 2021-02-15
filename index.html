@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <img src="./img/logo/logo.png" alt="" class="navbar__logo">
+        <div id="nav" class="navbar__body">
+          <input type="text" class="navbar__search-field" placeholder="Поиск" size="10">
+          <!-- menu -->
+          <ul class="menu navbar__menu">
+            <li class="menu__item"><a href="">Гражданам</a></li>
+            <li class="menu__item"><a href="">Бизнесу</a></li>
+            <li class="menu__item menu__sub"><a href="">О</a> нас</li>
+            <li class="menu__item menu__sub"><a href="">Справка</a></li>
+            <li class="menu__item menu__sub"><a href="">Пресс</a>-центр</li>
+            <li class="menu__item"><a href="">Контакты</a></li>
+          </ul>
+          <!-- contact -->
+          <div class="navbar__contact">
+            <a href="tel:+74955459364" class="navbar__phone">+7 (495) 545-93-64</a>
+            <button class="navbar__btn-callback">Заказать звонок</button>
+          </div>
+        </div>
+        <svg id="nav-toggler" class="navbar__toggler" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.9901 11.49H1.00986C0.452148 11.49 0 11.9421 0 12.4999C0 13.0576 0.452148 13.5097 1.00986 13.5097H23.9901C24.5479 13.5097 25 13.0576 25 12.4999C25 11.9421 24.5479 11.49 23.9901 11.49Z" fill="#935735"/>
+          <path d="M23.9901 3.82983H1.00986C0.452148 3.82983 0 4.28198 0 4.8397C0 5.39741 0.452148 5.84956 1.00986 5.84956H23.9901C24.5479 5.84956 25 5.39741 25 4.8397C25 4.28198 24.5479 3.82983 23.9901 3.82983Z" fill="#935735"/>
+          <path d="M23.9901 19.1501H1.00986C0.452148 19.1501 0 19.6022 0 20.16C0 20.7178 0.452148 21.1699 1.00986 21.1699H23.9901C24.5479 21.1699 25 20.7178 25 20.16C25 19.6022 24.5479 19.1501 23.9901 19.1501Z" fill="#935735"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- Banner -->
+  <div class="banner banner--home">
+    <div class="container">
+      <p class="banner__title">Юридический центр <br>адвоката Олега&nbsp;Сухова</p>
+      <ul class="banner__list">
+        <li class="banner__list-item">Помощь физлицам по гражданскому и уголовному праву</li>
+        <li class="banner__list-item">Юридическое сопровождение для всех видов бизнеса</li>
+      </ul>
+      <button class="btn banner__button">Записаться на консультацию</button>
+    </div>
+  </div>
+  <!-- About us -->
+  <div class="container">
+    <!-- labels -->
+    <span class="section-label section-label--left">О нас</span>
+    <span class="section-label section-label--right">О нас </span>
+    <!-- content -->
+    <div class="about">
+      <div class="about__col about__col-desc">
+        <p class="entry-title">Мы делаем жизнь своих клиентов комфортнее и безопаснее без лишних затрат</p>
+        <p class="about__desc-text">Адвокаты «Юридического центра Олега Сухова» эффективно и качественно решают поставленные задачи и предлагают наиболее оптимальные варианты достижения ваших целей. Рядом с вами будет успешная, ответственная и уважаемая команда профессионалов с уникальным опытом, добросовестно выполняющих свою работу.</p>
+        <a href="" class="link">Почему нас рекомендуют <img src="./img/icons/arrow.svg" alt="" class="link__icon"></a>
+      </div>
+      <div class="about__col">
+        <div class="about-cards-box">
+          <div class="about-card">
+            <img src="./img/sections/about/1.png" alt="" class="about-card__img">
+            <p class="about-card__title">Честность</p>
+            <p class="about-card__text">Мы говорим клиенту только о реальных перспективах дела.</p>
+          </div>
+          <div class="about-card">
+            <img src="./img/sections/about/2.png" alt="" class="about-card__img">
+            <p class="about-card__title">Эффективность</p>
+            <p class="about-card__text">Мы всегда экономим время и деньги наших клиентов.</p>
+          </div>
+          <div class="about-card">
+            <img src="./img/sections/about/3.png" alt="" class="about-card__img">
+            <p class="about-card__title">Поддержка</p>
+            <p class="about-card__text">Наши адвокаты готовы помочь в любое время и в любой точке страны.</p>
+          </div>
+          <div class="about-card">
+            <img src="./img/sections/about/4.png" alt="" class="about-card__img">
+            <p class="about-card__title">Доверие</p>
+            <p class="about-card__text">Мы гарантируем своим клиентам полную конфиденциальность.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

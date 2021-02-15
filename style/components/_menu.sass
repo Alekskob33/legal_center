@@ -1,0 +1,28 @@
+.menu
+  list-style: none
+  &__item
+    display: inline-block
+    margin-right: 25px
+    font-size: 16px
+    line-height: 1.4
+    color: $grey
+    text-decoration: none
+    a
+      text-decoration: none
+
+    @include laptop-down
+      font-size: 14px
+
+    @include tablet-down
+      display: block
+      margin-bottom: 0.3rem
+      text-align: left
+      letter-spacing: 0.3px
+
+  &__sub
+    @include tablet-up
+      padding-right: 15px
+      background: url('../img/icons/arrow-down.svg') no-repeat
+      background-position: right center
+
+

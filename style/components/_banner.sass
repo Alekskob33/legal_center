@@ -1,0 +1,74 @@
+.banner
+  display: block
+  min-height: 600px
+  padding-bottom: 67px
+  box-sizing: border-box
+  overflow: hidden
+  background-size: cover
+  background-repeat: no-repeat
+  &--home
+    background-image: url(../img/bg/banner-main.png)
+
+  @include laptop-down
+    min-height: 500px
+    padding-bottom: 25px
+    background-size: auto
+    background-position: -97px 0
+  @include tablet-down
+    background-position: -300px 0
+  @include phone-wide
+    background-size: 1000px
+    background: darken($white, 10%)
+    // background-image: url(../img/bg/banner-main-mob.png)
+  @include phone-narrow
+    background-position: -500px 0
+
+  &__title
+    margin-top: 2.6em
+    margin-bottom: 1.8em
+    font-size: 50px
+    font-weight: 700
+    line-height: 1.2
+    text-align: left
+    background: linear-gradient(90deg, #85410c 0%, #da955c 0%, #da955c 0%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25)
+
+    @include tablet-down
+      font-size: 38px
+    @include phone-wide
+      margin-top: 20px
+      margin-bottom: 5em
+      font-size: 32px
+      background: linear-gradient(90deg, #85410c 0%, #da955c 0%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-bottom: 20px
+    @include phone-narrow
+      margin-bottom: 0.5rem
+
+  &__list-item
+    position: relative
+    display: inline-block
+    margin-bottom: 1rem
+    font-size: 17px
+    padding: 0.4em 0.8em 0.4em 2.0em
+    box-shadow: 0px 4px 10px rgba(48, 48, 48, 0.25)
+    background-color: $white
+    line-height: 1.2
+    &:before
+      content: ''
+      position: absolute
+      left: 0.8em
+      top: 0
+      bottom: 0
+      margin: auto
+      @extend %dot
+    @include tablet-down
+      font-size: 15px

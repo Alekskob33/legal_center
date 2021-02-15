@@ -1,0 +1,50 @@
+.about
+  position: relative
+  display: flex
+  flex-flow: row wrap
+  padding-top: 114px
+  padding-bottom: 40px
+  @include tablet-down
+    padding: 30px 0
+
+  &__col
+    width: 50%
+    flex: auto
+    margin-bottom: 30px
+    box-sizing: border-box
+    &-desc
+      padding-right: 50px
+    @include tablet-down
+      width: 100%
+      padding: 0
+  &__desc-text
+    margin-bottom: 1.2em
+    font-size: 17px
+    @include phone-wide
+      font-size: 14px
+  &__desc-text
+
+.about-cards-box
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-end
+  @include tablet-down
+    justify-content: center
+
+.about-card
+  width: 100%
+  max-width: 200px
+  height: 192px
+  margin: 10px 8px
+  text-align: center
+  line-height: 1.2
+  @include card-theme
+  &__img
+    display: inline-block
+    margin-bottom: 14px
+  &__title
+    margin-bottom: 8px
+    font-size: 17px
+    font-weight: 600
+  &__text
+    margin-bottom: 8px

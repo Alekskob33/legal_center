@@ -1,0 +1,13 @@
+.btn
+  @include btn-size(13px, 47px, 20px)
+  @include btn-color($white, $brown)
+  font-weight: 700
+  text-transform: uppercase
+  box-shadow: 0px 4px 15px $brown
+  transition: all 0.2s
+  &:hover
+    box-shadow: 0px 4px 7px $brown
+  @include phone-narrow
+    width: 100%
+    font-size: 11px
+    text-align: center

@@ -1,0 +1,41 @@
+// Devices
+@mixin laptop-up
+  @media screen and (min-width: 1200px)
+    @content
+@mixin laptop-down
+	@media screen and (max-width: 1199px)
+		@content
+@mixin tablet-up
+	@media screen and (min-width: 980px)
+		@content
+@mixin tablet-down
+	@media screen and (max-width: 979px)
+		@content
+@mixin phone-wide
+	@media screen and (max-width: 600px)
+		@content
+@mixin phone-narrow
+	@media screen and (max-width: 420px)
+		@content
+
+// Button size
+@mixin btn-size($font-size, $height, $horizontal-padding)
+	display: inline-block
+	padding-top: ($height - $font-size) / 2 / $font-size * 1em
+	padding-bottom: ($height - $font-size) / 2 / ($font-size - 0px) * 1em
+	padding-left: $horizontal-padding / $font-size * 1em
+	padding-right: $horizontal-padding / $font-size * 1em
+	box-sizing: border-box
+	font-size: $font-size
+	line-height: 1
+
+// Button theme
+@mixin btn-color($color, $bg)
+	color: $color
+	background-color: $bg
+
+@mixin card-theme
+	padding: 23px 16px
+	box-sizing: border-box
+	border-radius: 10px
+	box-shadow: 0px 4px 15px rgba(149, 149, 149, 0.25)
