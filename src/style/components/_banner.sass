@@ -25,24 +25,15 @@
   &__title
     margin-top: 2.6em
     margin-bottom: 1.8em
-    font-size: 50px
     font-weight: 700
-    line-height: 1.2
-    text-align: left
-    background: linear-gradient(90deg, #85410c 0%, #da955c 0%, #da955c 0%)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+    @include text-responsive(50, 24, 1.2)
+    @include text-gradient(linear-gradient(90deg, #85410c 0%, #da955c 0%, #da955c 0%))
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25)
 
-    @include tablet-down
-      font-size: 38px
     @include phone-wide
       margin-top: 20px
       margin-bottom: 5em
-      font-size: 32px
-      background: linear-gradient(90deg, #85410c 0%, #da955c 0%)
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
+      @include text-gradient(linear-gradient(90deg, #85410c 0%, #da955c 0%))
 
   &__list
     display: flex
@@ -60,7 +51,7 @@
     padding: 0.4em 0.8em 0.4em 2.0em
     box-shadow: 0px 4px 10px rgba(48, 48, 48, 0.25)
     background-color: $white
-    line-height: 1.2
+    @include text-responsive(17, 15, 1.2)
     &:before
       content: ''
       position: absolute
@@ -69,5 +60,3 @@
       bottom: 0
       margin: auto
       @extend %dot
-    @include tablet-down
-      font-size: 15px

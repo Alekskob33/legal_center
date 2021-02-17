@@ -3,22 +3,15 @@
 	margin-bottom: 1.1em
 	padding-left: 0.6em
 	border-left: 5px solid $brown
-	font-size: 30px
-	line-height: 1.2
 	font-family: $font-second
-	@include tablet-down
-		font-size: 24px
-	@include phone-wide
-		font-size: 20px
+	@include text-responsive(30, 19)
 
 .link
 	display: inline-block
 	font-weight: 600
-	font-size: 17px
+	@include text-responsive(17, 15)
 	color: $brown
 	text-decoration: none
-	@include phone-wide
-		font-size: 15px
 	&__icon
 		display: inline-block
 		margin-left: 5px
@@ -28,12 +21,12 @@
 		.link__icon
 			margin-left: 12px
 
+
 .t-bold
 	font-weight: 700
 .t-upper
 	text-transform: uppercase
 .t-underline
 	text-decoration: underline
-
 .t-align-c
 	text-align: center
