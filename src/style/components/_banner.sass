@@ -4,11 +4,9 @@
   padding-bottom: 67px
   box-sizing: border-box
   overflow: hidden
-  background-size: cover
+  background-size: auto
   background-repeat: no-repeat
-  &--home
-    background-image: url(../img/bg/banner-main.png)
-
+  background-position: center top
   @include laptop-down
     min-height: 500px
     padding-bottom: 25px
@@ -16,12 +14,13 @@
     background-position: -97px 0
   @include tablet-down
     background-position: -300px 0
-  @include phone-wide
-    background-size: 1000px
-    background: darken($white, 10%)
-    // background-image: url(../img/bg/banner-main-mob.png)
-  @include phone-narrow
-    background-position: -500px 0
+
+  &--home
+    background-image: url(../img/bg/banner-main.png)
+    background-color: #f9f8f6
+    @include phone-wide
+      background-image: url(../img/bg/banner-main-600.png)
+      background-position: center top
 
   &__title
     margin-top: 2.6em
