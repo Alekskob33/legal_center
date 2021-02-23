@@ -1,0 +1,32 @@
+.l-services
+  @extend .l-section
+  &__row
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    > *
+      flex: auto
+
+  &__col-desc
+    display: flex
+    flex-direction: column
+    max-width: 510px
+    padding-right: 50px
+    justify-content: center
+    @include tablet-down
+      justify-content: start
+      width: 100%
+      max-width: 100%
+      padding-right: 0
+      margin-bottom: 30px
+
+  &__col-cards
+    max-width: 408px
+    @include tablet-down
+      max-width: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+    > *
+      flex: auto
+      margin-bottom: 20px
