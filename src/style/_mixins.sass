@@ -18,42 +18,18 @@
 	@media screen and (max-width: 420px)
 		@content
 
-// Button size
-@mixin btn-size($font-size, $height, $horizontal-padding)
-	display: inline-block
-	padding-top: ($height - $font-size) / 2 / $font-size * 1em
-	padding-bottom: ($height - $font-size) / 2 / ($font-size - 0px) * 1em
-	padding-left: $horizontal-padding / $font-size * 1em
-	padding-right: $horizontal-padding / $font-size * 1em
-	box-sizing: border-box
-	font-size: $font-size
-	line-height: 1
-
-// Button theme
-@mixin btn-color($color, $bg)
-	color: $color
-	background-color: $bg
-
-// Card theme
-@mixin card-theme
-	padding: 23px 16px
-	box-sizing: border-box
-	border-radius: 10px
-	box-shadow: 0px 4px 15px rgba(149, 149, 149, 0.25)
-
-
-@function calc-em($value, $font-size)
+@function em($value, $font-size)
 	@return $value / $font-size + em
 
 @function calc-lineHeight($font-size)
 	@if $font-size <= 16
 		@return 1.5
 	@if $font-size > 16 and $font-size <= 20
-		@return 1.4
+		@return 1.45
 	@if $font-size > 20 and $font-size <= 25
-		@return 1.3
+		@return 1.35
 	@if $font-size > 25 and $font-size <= 30
-		@return 1.2
+		@return 1.25
 	@if $font-size > 30 and $font-size <= 40
 		@return 1.15
 	@if $font-size > 40
@@ -61,25 +37,31 @@
 	@else
 		@return 1.00
 
-@mixin text-responsive($max-size, $min-size: 14, $line-height: undefined)
+@mixin text-responsive($max-size, $min-size: 16, $line-height: undefined)
+	// desctop
 	font-size: $max-size + px
-	@if $line-height != undefined
-		line-height: $line-height
-	@else
+	@if $line-height == undefined
 		line-height: calc-lineHeight($max-size)
-
+	@else
+		line-height: $line-height
+	// drop values down
 	$ratio-set: ("1100px": 0.75, "980px": 0.57, "420px": 0.4)
-	@each $breakpoint, $ratio in $ratio-set
-		@if $max-size * $ratio > $min-size
-			@media screen and (max-width: $breakpoint)
-				font-size: $max-size * $ratio + px
-				@if $line-height == undefined
-					line-height: calc-lineHeight($max-size * $ratio)
-		@else
-			@media screen and (max-width: $breakpoint)
-				font-size: $min-size + px
-				@if $line-height == undefined
-					line-height: calc-lineHeight($max-size * $ratio)
+	@if $max-size > 18
+		@each $breakpoint, $ratio in $ratio-set
+			@if $max-size * $ratio > $min-size
+				@media screen and (max-width: $breakpoint)
+					font-size: $max-size * $ratio + px
+					@if $line-height == undefined
+						line-height: calc-lineHeight($max-size * $ratio)
+			@else
+				@media screen and (max-width: $breakpoint)
+					font-size: $min-size + px
+					@if $line-height == undefined
+						line-height: calc-lineHeight($min-size)
+	@else if $max-size <= 18 and $max-size > 15
+		@media screen and (max-width: 980px)
+			font-size: $max-size - 2 + px
+			line-height: calc-lineHeight($max-size - 2)
 
 
 // Text Gradient

@@ -1,0 +1,35 @@
+// .mb(N)
+// .mb(N)e
+// .m0
+
+$space-step: 0
+@for $i from 0 through 10
+  .mb#{$i}
+    margin-bottom: $space-step + rem
+  .mb#{$i}e
+    margin-bottom: $space-step + em
+  .mt#{$i}
+    margin-top: $space-step + rem
+  .mt#{$i}e
+    margin-top: $space-step + em
+  $space-step: $space-step + 0.5
+
+.m0
+  margin: 0
+.ml-a
+  margin-left: auto
+.mr-a
+  margin-right: auto
+
+// structure
+.fx
+  display: flex
+.fx-align-center
+  align-items: center
+.fx-jc-between
+  justify-content: space-between
+.fx-jc-center
+  justify-content: center
+
+.w100
+  width: 100%

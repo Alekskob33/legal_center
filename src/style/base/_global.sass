@@ -9,38 +9,6 @@ body
 	overflow-x: hidden
 	font-family: $font-main, sans-serif
 
-.section
-	position: relative
-
-.section-label
-	position: absolute
-	top: 20px
-	display: inline-block
-	font-size: 15px
-	font-family: $font-second
-	letter-spacing: 0.61em
-	text-transform: uppercase
-	color: $grey
-	text-align: center
-
-	@include tablet-down
-		position: relative
-		top: 0
-		margin-top: 30px
-		&--right
-			display: none
-
-	@include laptop-up
-		top: 50%
-		&--right
-			transform: rotate(90deg) translateY(-50%)
-			transform-origin: left
-			right: -67px
-		&--left
-			transform: rotate(270deg) translateY(-50%)
-			transform-origin: right
-			left: -67px
-
 .container
 	position: relative
 	max-width: 1280px
@@ -49,3 +17,7 @@ body
 	box-sizing: border-box
 	@include laptop-down
 		padding: 0 30px
+
+	&.narrow
+		@include laptop-up
+			padding: 0 150px

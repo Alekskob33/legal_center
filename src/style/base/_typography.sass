@@ -1,32 +1,125 @@
-.entry-title
+$font-main: 'Opens Sans', sans-serif
+$font-second: 'Playfair Display', sans-serif
+
+$font-root: 14px
+
+// --------------------------------------------
+
+.f-second
+	font-family: $font-second
+
+// Titles
+.page-title
+	font-weight: 700
+	@include text-responsive(50, 24, 1.2)
+	@include text-gradient(linear-gradient(90deg, #85410c 0%, #da955c 0%, #da955c 0%))
+	text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25)
+	@include phone-wide
+		text-shadow: none
+
+.title
+	font-family: $font-second
+	@include text-responsive(30, 20)
+
+.title-bd-left
+	@extend .title
 	max-width: 650px
-	margin-bottom: 1.1em
 	padding-left: 0.6em
 	border-left: 5px solid $brown
-	font-family: $font-second
-	@include text-responsive(30, 19)
 
+.title-bd-top
+	@extend .title
+	position: relative
+	span
+		display: inline-block
+		position: relative
+		z-index: 1
+		input
+			display: inline-block
+			position: absolute
+			top: 0.9em
+			left: 0
+			right: 0
+			height: em(8, 30)
+			margin: 0 auto
+			background-color: #EDD4C0
+			border-width: 0
+			z-index: 0
+			@include phone-wide
+				top: 1em
+				max-width: 180px
+
+.cut-text
+	position: relative
+	overflow: hidden
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 3em
+		background: rgba(#fff, 0.5)
+
+// Links
 .link
 	display: inline-block
 	font-weight: 600
 	@include text-responsive(17, 15)
-	color: $brown
 	text-decoration: none
 	&__icon
 		display: inline-block
-		margin-left: 5px
+		margin-left: 3px
 		vertical-align: middle
 		transition: all 0.2s
 	&:hover
 		.link__icon
-			margin-left: 12px
+			margin-left: 10px
 
 
-.t-bold
-	font-weight: 700
-.t-upper
+.text-stretch
+	letter-spacing: 0.61em
 	text-transform: uppercase
-.t-underline
+	font-family: $font-second
+
+.text-uppercase
+	text-transform: uppercase
+
+.text-underline
 	text-decoration: underline
-.t-align-c
+.text-nodecor
+	text-decoration: none
+
+.text-center
 	text-align: center
+.text-va-middle
+	vertical-align: middle
+.text-va-bottom
+	vertical-align: bottom
+
+
+.fw800
+	font-weight: 800
+.fw700
+	font-weight: 700
+.fw600
+	font-weight: 600
+.fw500
+	font-weight: 500
+.fw400
+	font-weight: 400
+.fw300
+	font-weight: 300
+
+// responsive Text set:
+// example: .t(n) { font-size: (n)px }
+@for $i from 10 through 40
+	.t#{$i}
+		@include text-responsive($i)
+
+.t54
+	@include text-responsive(54,38,1.0)
+.t45
+	font-size: 45px
+	line-height: 1
