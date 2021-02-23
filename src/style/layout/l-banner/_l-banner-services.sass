@@ -1,0 +1,30 @@
+.l-banner-services
+  @include l-banner
+
+  .container
+    padding-top: 50px
+    padding-bottom: 50px
+    background-image: url(../img/bg/banner-serviсes.png)
+    background-size: auto
+    background-position: right center
+    background-repeat: no-repeat
+    @include tablet-down
+      padding-top: 30px
+      padding-bottom: 30px
+      background-size: 50vw
+      background-position: bottom 0 right 30px
+    @include phone-wide
+      background-size: 316px
+      background-position: bottom center
+      padding-bottom: 256px
+
+  &__title
+    margin-top: 1em
+    margin-bottom: 1.0em
+
+  &__text
+    max-width: 510px
+
+
+
+
