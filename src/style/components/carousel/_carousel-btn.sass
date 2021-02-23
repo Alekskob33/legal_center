@@ -1,0 +1,26 @@
+.carousel-btn
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 40px
+  height: 40px
+  margin-left: 2px
+  margin-right: 2px
+  border: 1px solid $brown
+  cursor: pointer
+  svg
+    fill: $brown
+  &:hover, &:active
+    background-color: $brown
+    svg
+      fill: $white
+
+.carousel-btn-white
+  @extend .carousel-btn
+  border-color: $white
+  svg
+    fill: $white
+  &:hover, &:active
+    svg
+      fill: $brown
+    background-color: $white

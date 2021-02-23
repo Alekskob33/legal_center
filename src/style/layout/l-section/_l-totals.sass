@@ -1,0 +1,18 @@
+.l-totals
+  @extend .l-section
+  background: url('../img/bg/bg-numbs.jpg') no-repeat
+  background-size: cover
+  &__title
+    max-width: 327px
+    margin-left: auto
+    margin-right: auto
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+  &__item
+    padding: 0 20px
+    @include phone-wide
+      width: 40%
+      padding: 0
