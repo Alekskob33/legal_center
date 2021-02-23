@@ -1,0 +1,29 @@
+.l-banner-home
+  @include l-banner
+
+  background-image: url(../img/bg/banner-main.png)
+  background-size: auto
+  background-position: center top
+  background-color: #f9f8f6
+
+  @include laptop-down
+    min-height: 500px
+    padding-bottom: 25px
+    background-size: auto
+    background-position: -97px 0
+
+  @include tablet-down
+    background-position: -300px 0
+
+  @include phone-wide
+    background-image: url(../img/bg/banner-main-600.png)
+    background-size: cover
+    background-position: center
+
+  &__title
+    margin-top: 2.6em
+    margin-bottom: 1.8em
+
+
+
+
