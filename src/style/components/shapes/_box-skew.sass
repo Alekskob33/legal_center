@@ -1,0 +1,17 @@
+.box-skew
+  position: relative
+  display: inline-block
+  padding: 17px 16px
+  > *
+    position: relative
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%) skewX(-10deg)
+    width: 100%
+    height: 100%
+    border-radius: 9px
+    background-color: $brown
