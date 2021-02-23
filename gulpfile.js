@@ -27,7 +27,11 @@ const path = {
   src: {
     html: "src/*.html",
     js: "src/js/app.js",
-    style: "src/style/style.{scss,sass}",
+    style: [
+      "src/style/style.sass",
+      // "src/style/components/**/*.sass",
+      // "src/style/layout/**/*.sass",
+    ],
     img: "src/img/**/*.{png,jpg,jpeg,gif,svg,webp}",
   },
   watch: {
@@ -60,7 +64,7 @@ gulp.task("html", function () {
 });
 
 // Style
-gulp.task("style", function () {
+gulp.task("sass", function () {
   return gulp
     .src(path.src.style)
     .pipe(sourcemaps.init())
@@ -112,7 +116,7 @@ gulp.task("image", function () {
 });
 
 // Build
-gulp.task("build", ["html", "js", "image", "style"]);
+gulp.task("build", ["html", "js", "image", "sass"]);
 
 // Watch
 gulp.task("watch", function () {
@@ -123,7 +127,7 @@ gulp.task("watch", function () {
     gulp.start("image");
   });
   watch(path.watch.style, { readDelay: 200 }, function (event, cb) {
-    gulp.start("style");
+    gulp.start("sass");
   });
   watch([path.watch.js], function (event, cb) {
     gulp.start("js");
