@@ -1,0 +1,26 @@
+.l-about
+  @extend .l-section
+
+  &__row
+    display: flex
+    flex-flow: row wrap
+
+  &__col
+    width: 50%
+    flex: auto
+    box-sizing: border-box
+    @include tablet-down
+      width: 100%
+      padding: 20
+    &-desc
+      padding-right: 50px
+      @include tablet-down
+        margin-bottom: 20px
+
+  &__cards
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-end
+    @include tablet-down
+      justify-content: center
+
