@@ -1,0 +1,43 @@
+.l-cases
+  @extend .l-section
+
+  &__title
+    max-width: 340px
+    margin-left: auto
+    margin-right: auto
+
+  &__skew
+    position: absolute
+    top: 0
+    right: 100px
+    max-width: 265px
+    @include laptop-down
+      top: 50px
+      right: 50px
+    @include tablet-down
+      position: relative
+      top: 0
+      right: 0
+      margin: 0 auto 30px
+
+  &__row-cards
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include tablet-down
+      align-items: stretch
+    @include phone-wide
+      flex-wrap: wrap
+      justify-content: center
+
+  &__item-card
+    max-width: 380px
+    margin-bottom: 20px
+
+  &__item-decor
+    margin-left: -50px
+    margin-right: -50px
+    @include tablet-down
+      position: absolute
+      z-index: -1
+      visibility: hidden
