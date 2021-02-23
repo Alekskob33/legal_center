@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+  <div class="l-section">
+    <!-- Components -->
+    <div class="container">
+      <!-- Titles -->
+      <h3 class="title-bd-left mb2e">Title Border left</h3>
+
+      <h3 class="title-bd-top mb2e">
+        <span><span>Title Border Top</span><input type="text" size="10" readonly></span>
+      </h3>
+
+      <h3 class="title">Simple title</h3>
+
+      <!-- labels -->
+      <span class="text-stretch color-grey l-section-label left">Section Label</span>
+      <span class="text-stretch color-grey l-section-label right">Section Label</span>
+
+      <!-- Text -->
+      <p class="t17 mb3e">Any Text sizes</p>
+
+      <!-- Link -->
+      <a href="" class="link color-brown">Подробнее
+        <img src="./img/icons/arrow.svg" alt="" class="link__icon">
+      </a>
+
+      <!-- Carousel buttons -->
+      <div>
+        <div id="case-prev" class="carousel-btn prev">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.18383 11.8114L14.5807 19.2059C14.9053 19.5296 15.4312 19.5296 15.7566 19.2059C16.0811 18.8821 16.0811 18.3562 15.7566 18.0325L8.94637 11.2247L15.7557 4.417C16.0803 4.09324 16.0803 3.56739 15.7557 3.24281C15.4312 2.91906 14.9045 2.91906 14.5799 3.24281L7.18301 10.6372C6.86342 10.9576 6.86342 11.4917 7.18383 11.8114Z"/>
+          </svg>
+        </div>
+        <div id="case-next" class="carousel-btn next">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.8162 11.8114L7.41925 19.2059C7.09468 19.5296 6.56882 19.5296 6.24343 19.2059C5.91886 18.8821 5.91886 18.3562 6.24343 18.0325L13.0536 11.2247L6.24425 4.417C5.91968 4.09324 5.91968 3.56739 6.24425 3.24281C6.56882 2.91906 7.0955 2.91906 7.42007 3.24281L14.817 10.6372C15.1366 10.9576 15.1366 11.4917 14.8162 11.8114Z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- content button -->
+      <button class="btn">Записаться на консультацию</button>
+      <!-- @@include('chanks/components/') -->
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="./js/app.min.js"></script>
+</body>
+</html>
