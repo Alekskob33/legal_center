@@ -1,0 +1,19 @@
+.l-articles
+  @extend .l-section
+
+  &__row
+    display: flex
+    justify-content: space-between
+    @include tablet-down
+      flex-wrap: wrap
+      justify-content: center
+
+  &__col
+    max-width: 440px
+    padding-right: 20px
+    @include tablet-down
+      padding-right: 0
+
+  &__btn
+    width: 100%
+    max-width: 273px
