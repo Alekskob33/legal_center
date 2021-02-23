@@ -1,0 +1,22 @@
+.l-subr-service
+  @extend .l-section
+
+  &__row
+    display: flex
+    justify-content: space-around
+    @include phone-wide
+      flex-wrap: wrap
+      justify-content: center
+
+  &__col
+    flex: 0 1 280px
+    padding: 0 20px
+    box-sizing: border-box
+    @include phone-wide
+      margin-bottom: 40px
+      padding: 0
+
+  &__title
+    max-width: 430px
+    margin-left: auto
+    margin-right: auto
