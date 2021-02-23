@@ -1,0 +1,26 @@
+.l-section-label
+	position: relative
+	display: inline-block
+	text-align: center
+	@include text-responsive(15, 11)
+	@include phone-wide
+		font-size: 11px
+
+	@include laptop-up
+		position: absolute
+		top: 50%
+		&.right
+			transform: rotate(90deg) translateX(50%)
+			transform-origin: right top
+			right: 0.5em
+		&.left
+			transform: rotate(-90deg) translateX(-50%)
+			transform-origin: left top
+			left: 0.5em
+
+	@include laptop-down
+		display: block
+		margin-bottom: 30px
+		text-align: left
+		&.right
+			display: none
