@@ -1,0 +1,24 @@
+.popup-search
+  width: 900px
+  padding: 30px 40px
+  box-sizing: border-box
+  border-radius: 10px
+  background-color: $white
+  box-shadow: 0px 4px 15px rgba(149, 149, 149, 0.25)
+  @include tablet-down
+    display: inline-block
+    width: calc(100% - 40px)
+  &__row
+    display: flex
+    align-items: flex-start
+    @include tablet-down
+      flex-wrap: wrap
+
+  &__dropdown
+    width: 235px
+    margin-right: 30px
+    @include tablet-down
+      margin-bottom: 20px
+  &__input
+    flex: 1 1
+

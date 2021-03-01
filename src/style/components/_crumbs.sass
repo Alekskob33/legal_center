@@ -1,0 +1,15 @@
+.crumbs
+  &__item
+    display: inline-block
+    font-size: 13px
+    line-height: 1.2
+    &::after
+      content: '>'
+      display: inline-block
+      margin: 0 2px
+      vertical-align: middle
+    a
+      text-decoration: none
+
+    &.current
+      color: $brown

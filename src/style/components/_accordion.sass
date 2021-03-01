@@ -1,0 +1,15 @@
+.accordion
+  position: relative
+
+.accordion-head
+  cursor: pointer
+  &__arrow
+    transition: all 0.3s
+
+[data-accordion-item]
+  &.hidden
+    .accordion-content
+      display: none
+  &.active
+    .accordion-head__arrow
+      transform: rotateX(180deg)
