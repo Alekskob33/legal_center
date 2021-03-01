@@ -1,0 +1,75 @@
+.modal
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  padding-top: 100px
+  box-sizing: border-box
+  overflow: auto
+  z-index: 10
+
+  &__body
+    position: relative
+    width: 100%
+    max-width: 1280px
+    height: 100%
+    margin: 0 auto
+    box-sizing: border-box
+
+  &__btn-close
+    position: absolute
+    top: 30px
+    right: 70px
+    cursor: pointer
+    stroke: #DFA576
+    z-index: 10
+    @include tablet-down
+      width: 30px
+      right: 30px
+      top: 10px
+
+  &__row
+    display: flex
+    height: 100%
+
+  &__col-description
+    position: relative
+    height: 100%
+    padding-top: 40px
+    padding-bottom: 40px
+    box-sizing: border-box
+    overflow: auto
+    @include tablet-up
+      padding-left: 8.5%
+      padding-right: 30px
+    @include tablet-down
+      padding-left: 15px
+      padding-right: 15px
+
+  &__col-photo
+    flex: 0 0 45%
+    background-color: $white
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+      object-position: top
+
+    @include tablet-down
+      display: none
+
+// quote's author
+.modal
+  &__quote-author
+    max-width: 330px
+  &__nav-quote
+    text-align: right
+    margin-bottom: 30px
+    @include tablet-up
+      position: absolute
+      display: inline-block
+      right: 30px
+      margin-top: -60px
+  &__carousel-body
+    min-height: 170px
