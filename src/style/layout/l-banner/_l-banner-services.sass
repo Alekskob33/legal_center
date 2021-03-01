@@ -4,10 +4,25 @@
   .container
     padding-top: 50px
     padding-bottom: 50px
-    background-image: url(../img/bg/banner-serviсes.png)
     background-size: auto
     background-position: right center
     background-repeat: no-repeat
+    &.bg-service-1
+      background-image: url(../img/bg/banner-serviсes.png)
+    &.bg-service-2
+      background-image: url(../img/bg/banner-serviсes-2.png)
+    &.bg-service-3
+      background-image: url(../img/bg/banner-serviсes-3.png)
+      @include tablet-up
+        background-size: auto
+        padding-top: 90px
+        padding-bottom: 90px
+      @include tablet-down
+        background-size: 40vw
+      @include phone-wide
+        background-size: 316px
+        padding-bottom: 206px
+
     @include tablet-down
       padding-top: 30px
       padding-bottom: 30px
