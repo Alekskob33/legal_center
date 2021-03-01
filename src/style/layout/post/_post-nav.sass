@@ -1,0 +1,18 @@
+.post-nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__item
+    display: inline-block
+    max-width: 420px
+    text-decoration: none
+    font-size: 15px
+    &.prev
+      &::before
+        content: '< '
+    &.next
+      &::after
+        content: ' >'
+
+    &:hover
+      color: $brown

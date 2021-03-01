@@ -1,0 +1,59 @@
+.post-preview
+  display: flex
+  margin-bottom: 30px
+  padding-bottom: 25px
+  border-bottom: 1px solid #EDD4C0
+  @include phone-wide
+    flex-wrap: wrap
+
+  &__img-box
+    width: 100%
+    max-width: 315px
+    margin-right: 33px
+    border-radius: 10px
+    overflow: hidden
+    @include tablet-down
+      max-width: 230px
+      margin-top: 24px
+    @include phone-wide
+      max-width: 150px
+      margin-top: 0
+      margin-bottom: 10px
+    @include phone-narrow
+      max-width: 100%
+
+  &__desc
+    position: relative
+    flex: auto
+
+  &__title
+    width: 70%
+    min-width: 250px
+    max-width: 530px
+
+  &__text
+    max-width: 620px
+    padding-right: 20px
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    box-orient: vertical
+    text-overflow: ellipsis
+    -webkit-line-clamp: 3
+    overflow: hidden
+    font-size: 15px
+    line-height: 1.5
+    max-height: (1.5 * 14px) * 3
+
+  &__date
+    text-align: right
+    margin-bottom: 0
+    @include phone-wide
+      margin-bottom: 10px
+      text-align: left
+
+  &__link
+    margin-bottom: 0
+    @include phone-wide
+      order: 2
+      width: 100%
+      margin-top: 10px
