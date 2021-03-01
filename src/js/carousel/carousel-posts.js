@@ -1,7 +1,4 @@
-// $(document).ready(function () {
-// });
-
-$("#carousel-feedbacks").slick({
+$("#carousel-relevant-posts").slick({
   dots: false,
   infinite: false,
   speed: 300,
@@ -15,7 +12,7 @@ $("#carousel-feedbacks").slick({
       },
     },
   ],
-  appendArrows: $("#feedbacks-nav"),
-  nextArrow: $("#feedbacks-next"),
-  prevArrow: $("#feedbacks-prev"),
+  appendArrows: $("#posts-nav"),
+  nextArrow: $("#post-next"),
+  prevArrow: $("#post-prev"),
 });
