@@ -1,0 +1,22 @@
+.list
+  position: relative
+  padding-left: 15px
+  &__item
+    display: block
+    position: relative
+    margin-bottom: 1rem
+    padding-left: 5px
+    &.current
+      font-weight: 600
+
+    &-title
+      &::before
+        content: '\25BE'
+        display: inline-block
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translate(-100%, -50%) scaleY(0.85)
+        transform-origin: center
+        font-size: 32px
+        color: $brown
