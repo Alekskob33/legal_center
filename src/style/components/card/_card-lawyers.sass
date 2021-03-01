@@ -1,0 +1,15 @@
+.card-lawyers
+  @include card
+  display: inline-block
+  max-width: 335px
+  padding-left: 23px
+  padding-right: 23px
+
+  &__img
+    margin-top: -23px
+    margin-left: -23px
+    margin-right: -23px
+    ~ * img
+      display: inline-block
+    > img
+      width: 100%
