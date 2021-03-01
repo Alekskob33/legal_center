@@ -13,12 +13,12 @@
   <div class="l-section">
     <!-- Components -->
     <div class="container">
-      <!-- Titles -->
-      <h3 class="title-bd-left mb2e">Title Border left</h3>
-
-      <h3 class="title-bd-top mb2e">
+      <!-- Title border center -->
+      <h3 class="title-bd-top text-center mb2e">
         <span><span>Title Border Top</span><input type="text" size="10" readonly></span>
       </h3>
+      <!-- Title border left -->
+      <h3 class="title-bd-left border-brown mb2e">Title Border left</h3>
 
       <h3 class="title">Simple title</h3>
 
@@ -47,14 +47,127 @@
           </svg>
         </div>
       </div>
+      <!-- Carousel dots (class only) -->
+      <div id="carousel-lawyers-dots"></div>
+      <br>
 
       <!-- content button -->
       <button class="btn">Записаться на консультацию</button>
       <!-- @@include('chanks/components/') -->
+
+      <!-- breadcrumbs -->
+      <ul class="crumbs mt3 mb4">
+        <li class="crumbs__item"><a href="">О нас</a></li>
+        <li class="crumbs__item"><a href="">Выигранные дела</a></li>
+        <li class="crumbs__item current">Дело № 546  Включение в реестр обманутых дольщиков по решению суда</li>
+      </ul>
+
+      <!-- posts nav -->
+      <nav class="post-nav color-grey mt2 mb3">
+        <a href="" class="post-nav__item prev">Предыдущая статья</a>
+        <a href="" class="post-nav__item next">Следующая статья</a>
+      </nav>
+
+      <!-- pagination -->
+      <ul class="pagination mb3">
+        <li class="pagination__item current">1</li>
+        <li class="pagination__item">2</li>
+        <li class="pagination__item">3</li>
+        <li class="pagination__item">&hellip;</li>
+        <li class="pagination__item">7</li>
+        <li class="pagination__item">Далее> </li>
+      </ul>
+
+
+      <!-- filter -->
+      <div class="filter-row mb15">
+        <div class="filter-row__label">
+          <span class="filter-row__label-text t15 color-grey d-ib mr2">Сортировать по:</span>
+          <!-- dropdown -->
+          <div data-dropdown class="dropdown absolute">
+            <div data-dropdown-btn class="dropdown__btn">
+              Все разделы
+              <svg class="dropdown__btn-icon" width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.44269 9.6761L10.476 4.95348C10.6526 4.74625 10.6526 4.41051 10.476 4.20276C10.2994 3.99554 10.0126 3.99554 9.83601 4.20276L6.1227 8.55079L2.40938 4.20329C2.23279 3.99606 1.94596 3.99606 1.76892 4.20329C1.59233 4.41051 1.59233 4.74677 1.76892 4.954L5.80222 9.67662C5.97699 9.88067 6.26833 9.88067 6.44269 9.6761Z" fill="#777777"/>
+              </svg>
+            </div>
+            <div data-dropdown-list class="dropdown__list">
+              <div class="dropdown__item">
+                <form action="">
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Все разделы</span>
+                  </label>
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Услуги</span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-row__label">
+          <span class="filter-row__label-text t15 color-grey d-ib mr2">Фильтр услуг:</span>
+          <!-- dropdown -->
+          <div data-dropdown class="dropdown absolute">
+            <div data-dropdown-btn class="dropdown__btn">
+              Все разделы
+              <svg class="dropdown__btn-icon" width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.44269 9.6761L10.476 4.95348C10.6526 4.74625 10.6526 4.41051 10.476 4.20276C10.2994 3.99554 10.0126 3.99554 9.83601 4.20276L6.1227 8.55079L2.40938 4.20329C2.23279 3.99606 1.94596 3.99606 1.76892 4.20329C1.59233 4.41051 1.59233 4.74677 1.76892 4.954L5.80222 9.67662C5.97699 9.88067 6.26833 9.88067 6.44269 9.6761Z" fill="#777777"/>
+              </svg>
+            </div>
+            <div data-dropdown-list class="dropdown__list">
+              <div class="dropdown__item">
+                <form action="">
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Все разделы</span>
+                  </label>
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Услуги</span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- quote -->
+      <blockquote class="quote bg-grey mb4">
+        <p class="t17 fw600 mb2">Цель нововведений — это привести нормы Семейного Кодекса РФ в соответствии с Гражданским Кодексом.</p>
+        <p class="t17 mb0">Некоторые статьи проекта не вызывают нареканий. К ним относятся новеллы о приостановлении получения свидетельства о праве собственности в случае банкротства наследодателя или отнесение долгов к общему имуществу. С другой стороны, текст законопроекта содержит неясные и даже спорные моменты. Например, новелла об уменьшении доли супруга при продаже без согласия жены (мужа) имущества. А норма о совместном банкротстве вообще требует серьезной доработки. В предложенном варианте она выгодна только банкам и кредиторам и приведёт к несправедливости по отношению к супругу (супруге) должника и третьим лицам (например, к членам новых семей бывших супругов).</p>
+      </blockquote>
+
+      <!-- quote small -->
+      <blockquote class="quote-sm bg-grey mb0">
+        <p class="t17 mb0">Выражаем благодарность «Юридическому Центру адвоката Олега Сухова» за решение вопросов в области юридического сопровождения деятельности нашей фирмы. В процессе совместной работы мы убедились в высокой квалификации сотрудников вашего Юридического центра. позволяющей успешно решать задачи любой сложности.</p>
+      </blockquote>
+
+      <!-- text with short underline -->
+      <p class="t13 color-grey mb0">Старший юрист</p>
+      <hr class="hr-mini border-brown mb3">
+
+      <!-- list arrow -->
+      <ul class="list-arrow mb3">
+        <li class="list-arrow__item">
+          <a class="list-arrow__text" href="">Адвокат по недвижимости</a>
+          <img src="./img/icons/arrow.svg" alt="" class="list-arrow__icon">
+        </li>
+      </ul>
+
+
     </div>
   </div>
 
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="./js/app.min.js"></script>
 </body>
 </html>
