@@ -17,7 +17,13 @@ body
 	box-sizing: border-box
 	@include laptop-down
 		padding: 0 30px
+	@include phone-wide
+		padding: 0 15px
 
 	&.narrow
 		@include laptop-up
 			padding: 0 150px
+	&.extra-narrow
+		@include laptop-up
+			max-width: 800px
+			padding: 0

@@ -3,7 +3,7 @@
 // .m0
 
 $space-step: 0
-@for $i from 0 through 10
+@for $i from 0 through 15
   .mb#{$i}
     margin-bottom: $space-step + rem
   .mb#{$i}e
@@ -12,6 +12,22 @@ $space-step: 0
     margin-top: $space-step + rem
   .mt#{$i}e
     margin-top: $space-step + em
+  .mr#{$i}
+    margin-right: $space-step + rem
+  .mr#{$i}e
+    margin-right: $space-step + em
+  .ml#{$i}
+    margin-left: $space-step + rem
+  .ml#{$i}e
+    margin-left: $space-step + em
+  .pr#{$i}
+    padding-right: $space-step + rem
+  .pr#{$i}e
+    padding-right: $space-step + em
+  .pl#{$i}
+    padding-left: $space-step + rem
+  .pl#{$i}e
+    padding-left: $space-step + em
   $space-step: $space-step + 0.5
 
 .m0
@@ -24,12 +40,23 @@ $space-step: 0
 // structure
 .fx
   display: flex
+.fx-wrap
+  flex-wrap: wrap
+.fx-dir-col
+  flex-direction: column
 .fx-align-center
   align-items: center
+.fx-align-start
+  justify-items: flex-start
 .fx-jc-between
   justify-content: space-between
 .fx-jc-center
   justify-content: center
+.fx-none
+  flex: none
 
 .w100
   width: 100%
+
+.pos-r
+  position: relative
