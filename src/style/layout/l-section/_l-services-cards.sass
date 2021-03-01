@@ -1,0 +1,24 @@
+.l-services-cards
+  @extend .l-section
+
+  &__row
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: stretch
+    @include phone-wide
+      display: block
+
+  &__item
+    flex-basis: calc(33.33% - 30px)
+    max-width: 330px
+    margin: 15px
+    @include tablet-down
+      flex-basis: calc(50% - 30px)
+    @include phone-wide
+      max-width: 100%
+    > *
+      display: inline-block
+      padding: 25px
+      height: 100%
+
