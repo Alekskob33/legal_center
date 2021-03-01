@@ -1,0 +1,102 @@
+.tabs
+  position: relative
+  border-radius: 10px
+  box-shadow: 0px 4px 15px rgba(149, 149, 149, 0.25)
+  overflow: hidden
+
+  &__nav
+    display: flex
+    background-color: $grey-light-x
+    @include tablet-down
+      flex-direction: column
+
+  &__nav-item
+    position: relative
+    flex: 1 1 10%
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 133px
+    padding: 20px 24px 24px
+    box-sizing: border-box
+    color: $grey-x
+    text-align: center
+
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      margin: auto
+      width: 1px
+      height: 60%
+      background-color: lighten($grey-x, 15%)
+    &:last-child::after,
+    &.current::after
+      content: none
+    h6
+      font-feature-settings: 'pnum' on, 'lnum' on
+    span
+      line-height: 1.2
+
+    &.current
+      background-color: $white
+      h6
+        color: $brown
+      span
+        color: $black
+
+    @include tablet-down
+      flex-direction: row
+      height: auto
+      padding: 12px 15px
+      margin-bottom: 7px
+      h6
+        font-size: 20px
+        margin-right: 10px
+        margin-bottom: 0
+      span
+        font-size: 14px
+      &::after
+        content: none
+
+  &__body
+    position: relative
+    padding: 50px
+    background-color: $white
+    @include phone-wide
+      padding: 20px
+
+  &__content
+    display: none
+    &.current
+      display: block
+
+  &__content-row
+    display: flex
+    @include phone-wide
+      flex-direction: column
+
+  &__content-desc
+    max-width: 510px
+    margin-right: auto
+    @include phone-wide
+      margin-bottom: 20px
+
+  &__content-img
+    flex: 1 0 45%
+    max-width: 440px
+    text-align: center
+    img
+      display: inline-block
+
+// attributes
+[data-tabs-content]
+  display: none
+  &.current
+    display: block
+
+[data-tabs-item]
+  cursor: pointer
