@@ -1,0 +1,45 @@
+$size-radio: 15px
+$icon-margin-right: 7px
+
+label.radio
+  display: block
+  width: 100%
+  cursor: pointer
+  position: relative
+  color: $grey
+  font-size: 15px
+  line-height: 1.5em
+  user-select: none
+  i
+    display: inline-block
+    position: relative
+    width: $size-radio
+    height: $size-radio
+    border-radius: 50%
+    border: 1px solid $brown
+    vertical-align: middle
+    margin-right: $icon-margin-right
+
+  span
+    vertical-align: middle
+    display: inline-block
+    width: calc(100% - $size-radio - $icon-margin-right)
+
+  input
+    z-index: -1
+    opacity: 0
+    position: absolute
+    &:checked
+      ~ i
+        &:after
+          content: ""
+          width: 9px
+          height: 9px
+          position: absolute
+          left: 0
+          right: 0
+          bottom: 0
+          top: 0
+          margin: auto
+          background-color: $brown
+          border-radius: 50%

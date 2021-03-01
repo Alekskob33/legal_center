@@ -1,0 +1,44 @@
+.dropdown
+  position: relative
+  font-size: 15px
+  color: $black-x
+  &__btn
+    position: relative
+    display: inline-block
+    min-width: 235px
+    padding: 0.625em 3.625em 0.625em 1.625em
+    box-sizing: border-box
+    border-radius: 23px
+    box-shadow: 0px 2px 10px rgba(179, 179, 179, 0.25)
+    background-color: $white
+    cursor: pointer
+    z-index: 1
+    &.active
+      .dropdown__btn-icon
+        transform: translateY(-50%) rotate(0deg)
+  &__btn-icon
+    position: absolute
+    right: 15px
+    top: 50%
+    transform: translateY(-50%) rotate(-90deg)
+    transition: 0.2s
+  &__list
+    display: none
+    position: relative
+    left: 0
+    top: -35px
+    right: 0
+    padding-top: 35px
+    padding-bottom: 5px
+    box-shadow: 0px 2px 10px rgba(179, 179, 179, 0.25);
+    border-radius: 0px 0px 10px 10px
+    background-color: $white
+  &__item
+    padding: 0.625em 1.625em
+    background-color: $white
+
+.dropdown
+  &.absolute
+    .dropdown__list
+      position: absolute
+      top: 15px
