@@ -1,0 +1,22 @@
+.posts-carousel-nav
+  width: 100%
+  display: flex
+  justify-content: space-between
+  box-sizing: border-box
+
+  @include laptop-up
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    &__prev
+      left: -70px
+    &__next
+      right: -70px
+
+  &__prev, &__next
+    position: relative
+
+  @include laptop-down
+    justify-content: flex-end
+    padding: 0 35px
