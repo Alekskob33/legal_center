@@ -1,0 +1,14 @@
+.l-post-law
+  &__nav-top
+    @include tablet-down
+      .next
+        display: none
+  &__nav-bottom
+    display: none
+    .prev, .next
+      display: none
+    @include tablet-down
+      display: flex
+      justify-content: flex-end
+      .next
+        display: inline-block

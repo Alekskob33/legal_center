@@ -1,0 +1,40 @@
+.l-banner-blog
+  position: relative
+  padding: 50px
+  background-image: url('../img/bg/bg-banner-blog.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+
+  @include phone-wide
+    padding: 35px
+    text-align: center
+
+  &__body
+    position: relative
+
+  &__date
+    position: absolute
+    top: -24px
+    right: 0
+    font-size: 15px
+    @include phone-wide
+      top: 0
+      right: 0
+      position: relative
+      font-size: 12px
+
+  &__time
+    font-size: 15px
+    @include phone-wide
+      font-size: 12px
+
+  &__link
+    position: absolute
+    right: -12px
+    bottom: -17px
+    font-size: 17px
+    @include phone-wide
+      position: relative
+      right: 0
+      bottom: 0
+      font-size: 15px

@@ -1,0 +1,15 @@
+.l-lawyers
+  @extend .l-section
+
+  &__row
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    @include tablet-down
+      display: block
+
+  &__col
+    margin: 0 10px 32px 10px
+    text-align: center
+    @include tablet-up
+      flex: 0 0 calc(33% - 20px);

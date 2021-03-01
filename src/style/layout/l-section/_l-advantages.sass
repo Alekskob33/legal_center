@@ -1,0 +1,22 @@
+.l-advantages
+  @extend .l-section
+
+  &__list
+    display: flex
+    justify-content: space-around
+    @include tablet-down
+      flex-wrap: wrap
+
+  &__item
+    flex: 1 1 25%
+    max-width: 270px
+    min-width: 200px
+    padding: 0 20px
+    box-sizing: border-box
+    @include tablet-down
+      margin-bottom: 30px
+  &__item-img
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    min-height: 80px
