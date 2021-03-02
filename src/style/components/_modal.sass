@@ -8,6 +8,8 @@
   box-sizing: border-box
   overflow: auto
   z-index: 10
+  &.hidden
+    display: none
 
   &__body
     position: relative
@@ -73,3 +75,6 @@
       margin-top: -60px
   &__carousel-body
     min-height: 170px
+
+[data-modal='btn-toggler']
+  cursor: pointer

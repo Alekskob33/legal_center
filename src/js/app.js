@@ -23,10 +23,10 @@ if ($modal && $modal_btn) {
   $modal_btn.click(function () {
     if ($modal.hasClass("is-active")) {
       $modal.removeClass("is-active");
-      $modal.hide();
+      $modal.fadeOut();
     } else {
       $modal.addClass("is-active");
-      $modal.show();
+      $modal.fadeIn();
     }
   });
 }
