@@ -5,14 +5,45 @@
       <div id="nav" class="navbar__body">
         <input type="text" class="navbar__search-field" placeholder="Поиск" size="10">
         <!-- menu -->
-        <ul class="menu navbar__menu">
-          <li class="menu__item"><a href="">Гражданам</a></li>
-          <li class="menu__item"><a href="">Бизнесу</a></li>
-          <li class="menu__item menu__sub"><a href="">О</a> нас</li>
-          <li class="menu__item menu__sub"><a href="">Справка</a></li>
-          <li class="menu__item menu__sub"><a href="">Пресс</a>-центр</li>
-          <li class="menu__item"><a href="">Контакты</a></li>
-        </ul>
+        <div class="navbar__menu-wrap">
+          <ul data-menu-list class="menu navbar__menu">
+            <li class="menu__item"><a href="">Гражданам</a></li>
+            <li class="menu__item"><a href="">Бизнесу</a></li>
+            <li class="menu__item">
+              <span data-menu-sub class="menu__sub">О нас</span>
+              <ul data-menu-submenu class="menu__submenu">
+                <li data-menu-back class="menu__submenu-item">
+                  <span class="menu__sub back">меню</span>
+                </li>
+                <li class="menu__submenu-item">
+                  <a href="">О компании</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a href="">О выигранные дела</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a href="">Отзывы</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="">Справка</a></li>
+            <li class="menu__item">
+              <span data-menu-sub class="menu__sub">Пресс-центр</span>
+              <ul data-menu-submenu class="menu__submenu">
+                <li data-menu-back class="menu__submenu-item">
+                  <span class="menu__sub back">меню</span>
+                </li>
+                <li class="menu__submenu-item">
+                  <a href="">Новости и статьи</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a href="">Публикации в СМИ</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="">Контакты</a></li>
+          </ul>
+        </div>
         <!-- contact -->
         <div class="navbar__contact">
           <a href="tel:+74955459364" class="navbar__phone">+7 (495) 545-93-64</a>

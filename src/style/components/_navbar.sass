@@ -5,7 +5,8 @@
   box-shadow: 0px 13px 39px -20px rgba(191, 191, 191, 0.25)
   z-index: 100
   &__inner
-    padding: 27px 0
+    @include laptop-down
+      padding: 12px 0
 
   &__inner,
   &__body
@@ -17,13 +18,32 @@
   &__body
     flex: auto
     justify-content: space-around
+    transition: all 0.2s
+
     @include laptop-down
-      display: none
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+      position: absolute
+      left: 0
+      right: 0
+      top: 60px
       width: 100%
+      height: calc(100vh - 40px)
+      z-index: -10
+      visibility: hidden
+      opacity: 0
       order: 4
-      margin-top: 20px
+      background-color: rgba($brown, 0.97)
+
     @include laptop-up
       display: flex !important
+
+    &.is-active
+      z-index: 100
+      visibility: visible
+      opacity: 1
 
   &__logo
     flex: none
@@ -42,17 +62,37 @@
     background: url('../img/icons/search.svg') no-repeat
     background-position: right center
 
-  &__search-field,
+  &__search-field
+    @include laptop-down
+      display: none
+
+  &__menu-wrap
+    @include laptop-down
+      width: 100%
+      max-width: 700px
+      margin-top: 1rem
+      margin-bottom: 2rem
+      overflow: hidden
+    @include tablet-down
+      max-width: 600px
+    @include phone-wide
+      max-width: 300px
+
   &__menu
     @include laptop-down
-      margin-bottom: 1rem
+      position: relative
+      transition: all 0.3s
+      left: 0
+      &.shift-left
+        left: -100%
 
   &__contact
     display: flex
     flex-direction: column
     align-items: center
     @include laptop-down
-      align-items: flex-start
+      align-items: center
+      color: $white-x
 
   &__phone
     display: inline-block
@@ -67,6 +107,8 @@
     padding-bottom: 3px
     border-bottom: 1px dashed $grey
     font-size: 15px
+    @include laptop-down
+      color: $white-x
 
   &__toggler
     display: none

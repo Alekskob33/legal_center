@@ -7,13 +7,21 @@ if ($menu && $menu_toggler) {
   $menu_toggler.click(function () {
     if ($menu.hasClass("is-active")) {
       $menu.removeClass("is-active");
-      $menu.slideUp();
     } else {
       $menu.addClass("is-active");
-      $menu.slideDown();
     }
   });
 }
+
+$("[data-menu-sub]").on("click", function () {
+  $("[data-menu-list]").addClass("shift-left");
+  $(this).next("[data-menu-submenu]").addClass("visible");
+});
+
+$("[data-menu-back]").on("click", function () {
+  $("[data-menu-list]").removeClass("shift-left");
+  $(this).closest("[data-menu-submenu]").removeClass("visible");
+});
 
 // modal
 const $modal = $("[data-modal='container']") || null;
