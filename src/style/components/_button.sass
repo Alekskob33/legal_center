@@ -48,3 +48,26 @@
     box-shadow: 0px 2px 10px rgba(179, 179, 179, 0.25)
   &.w-210
     min-width: 210px
+  
+.play-btn
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 56px
+  height: 56px
+  background-color: $brown
+  box-shadow: 0 10px 37px rgba(#000, 0.19)
+  border-radius: 50%
+  font-size: 0
+  letter-spacing: 0
+  line-height: 0
+  &::after
+    content: ''
+    position: relative
+    display: block
+    transform: translateX(25%)
+    border-width: 7px 10px
+    border-style: solid
+    border-color: transparent
+    border-right-width: 0
+    border-left-color: white

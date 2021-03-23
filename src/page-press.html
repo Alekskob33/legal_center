@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('chanks/component/head.html')
+<body>
+  <!-- Navbar -->
+  @@include('chanks/component/navbar.html')
+
+  <!-- Content -->
+  <div class="container">
+    <div class="tabs-publics" data-tabs>
+      <ul class="tabs-publics__nav" data-tabs-nav>
+        <li class="tabs-publics__nav-item current" data-tabs-item>
+          Все публикации</li>
+        <li class="tabs-publics__nav-item" data-tabs-item>
+          Пресса</li>
+        <li class="tabs-publics__nav-item" data-tabs-item>
+          Телевидение</li>
+      </ul>
+      <div class="tabs-publics__body" data-tabs-container>
+        <div class="current" data-tabs-content>
+          <div class="tabs-publics__content">
+            @@include('chanks/section/pablics.html')
+          </div>
+        </div>
+        <div class="" data-tabs-content>
+          <div class="tabs-publics__content">
+            @@include('chanks/section/pablics-media.html')
+          </div>
+        </div>
+        <div class="" data-tabs-content>
+          <div class="tabs-publics__content">
+            @@include('chanks/section/pablics-tv.html')
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include('chanks/component/pagination.html')
+  </div>
+
+  @@include('chanks/section/footer.html')
+</body>
+</html>

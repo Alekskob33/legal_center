@@ -1,0 +1,45 @@
+.card-pablic
+  @include card
+
+  position: relative
+  display: inline-block
+  margin-bottom: 40px
+  padding-left: 23px
+  padding-right: 23px
+  border-radius: 7px
+  overflow: hidden
+
+  &__img
+    position: relative
+  &__img-link
+    display: block
+    height: 190px
+    margin-top: -23px
+    margin-left: -23px
+    margin-right: -23px
+    > img
+      width: 100%
+      width: 100%
+      height: 100%
+      object-fit: cover
+  
+  a
+    text-decoration: none
+
+  &__play-btn
+    position: absolute
+    bottom: 0
+    right: 0
+    transform: translateY(50%)
+  
+  &__desc
+    margin-bottom: 14px
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    box-orient: vertical
+    text-overflow: ellipsis
+    -webkit-line-clamp: 4
+    overflow: hidden
+    font-size: 14px
+    line-height: 1.5
+    max-height: (1.5 * 14px) * 4

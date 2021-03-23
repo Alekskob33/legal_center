@@ -1,0 +1,41 @@
+.tabs-publics
+  position: relative
+  @include tablet-down
+    margin: auto
+    max-width: 600px
+  @include phone-wide
+    max-width: 360px
+    
+  &__nav
+    display: flex
+    justify-content: center
+    margin-top: 40px
+    margin-bottom: 50px
+    border-bottom: 1px solid $brown
+    background-color: $white
+
+    @include phone-wide
+      flex-direction: column
+      align-items: center
+
+  &__nav-item
+    padding: 13px
+    border-radius: 5px 5px 0 0
+    font-size: 14px
+    cursor: pointer
+    &.current
+      background-color: $brown
+      color: $white
+
+  &__body
+    margin-bottom: 30px
+    
+  &__content
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: auto
+    column-gap: 40px
+    @include tablet-down
+      grid-template-columns: repeat(2, 1fr)
+    @include phone-wide
+      grid-template-columns: 1fr
