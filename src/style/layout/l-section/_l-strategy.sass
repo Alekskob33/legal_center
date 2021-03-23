@@ -1,0 +1,28 @@
+.l-strategy
+  @extend .l-section
+  
+  &__row
+    display: flex
+    justify-content: space-between
+    @include phone-wide
+      flex-direction: column
+      align-items: center
+      
+  &__col
+    max-width: 360px
+    box-sizing: border-box
+    border: 1px solid $grey-x
+    @include tablet-up
+      min-height: 390px
+      padding: 50px
+    @include tablet-down
+      padding: 30px
+    @include phone-wide
+      margin-bottom: 30px
+      padding: 20px
+    
+    img
+      display: block
+      width: 100%
+      max-width: 145px
+      margin: 0 auto 10px auto
