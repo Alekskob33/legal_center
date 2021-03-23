@@ -1,0 +1,27 @@
+.l-category
+  @extend .l-section
+
+  &__row
+    display: flex
+    @include tablet-down
+      flex-direction: column
+      max-width: 600px
+      margin-left: auto
+      margin-right: auto
+
+  &__main
+    flex-basis: 100%
+    margin-right: 50px
+    @include tablet-down
+      margin-right: 0
+
+  &__sidebar
+    flex: none
+    width: 290px
+    @include tablet-down
+      order: -1
+      margin: auto
+  
+  &__top-contact
+    @include tablet-down
+      display: none

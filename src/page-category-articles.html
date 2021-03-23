@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('chanks/component/head.html')
+<body>
+  <!-- Navbar -->
+  @@include('chanks/component/navbar.html')
+
+  <!-- Content -->
+  <div class="l-category">
+    <div class="container">
+      <h3 class="title-bd-left border-brown mb2e">Статьи</h3>
+      <div class="l-category__row">
+        <!-- main -->
+        <div class="l-category__main">
+          @@include('chanks/main/main-articles.html')
+          @@include('chanks/main/main-articles.html')
+
+          @@include('chanks/component/pagination.html')
+        </div>
+        <!-- sidebar -->
+        <div class="l-category__sidebar">
+          <!-- search -->
+          <div class="text-center mb7">
+            <input type="text" class="search wide" placeholder="Поиск">
+          </div>
+          <!-- links -->
+          <p class="t14 fw600 mb2 color-grey-x">Рубрики</p>
+          <p class="mb1">
+            <a class="t14 color-brown text-nodecor" href="./page-category-articles.html">Статьи</a>
+            <hr class="hr border-grey-x">
+          </p>
+          <p class="mb1">
+            <a class="t14 color-brown text-nodecor" href="./page-category-news.html">Новости</a>
+            <hr class="hr border-grey-x">
+          </p>
+          <!-- contacts -->
+          <div class="mt7 l-category__top-contact">
+            <p class="t17">
+              <img src="./img/icons/maps-and-flags.svg" alt="" class="text-va-middle">&nbsp;
+              <span class="color-grey">г. Москва, Тверская, 16</span>
+            </p>
+            <p class="t17">
+              <img src="./img/icons/call-answer.svg" alt="" class="text-va-middle">&nbsp;
+              <span class="color-grey">+7 (495) 545-93-64</span>
+            </p>
+            <p class="t17 mb3">
+              <img src="./img/icons/close-envelope.svg" alt="" class="text-va-middle">&nbsp;
+              <span class="color-grey">uristmoscow@bk.ru</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- @@include('chanks/section/.html') -->
+
+  @@include('chanks/section/footer.html')
+</body>
+</html>
