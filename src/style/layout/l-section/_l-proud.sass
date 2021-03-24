@@ -4,12 +4,25 @@
   &__row
     display: flex
     justify-content: space-between
-
+    @include tablet-down
+      flex-direction: column
+      align-items: center
   &__col
-    width: calc(50% - 10px)
+    width: calc(50% - 20px)
+    @include tablet-down
+      width: 100%
+      max-width: 800px
+      margin-bottom: 30px
+
   &__text-note
     max-width: 290px
     margin-left: 17px
     margin-top: 14px
     p
       line-height: 1.85em
+
+  &__progressbars
+    @include tablet-down
+      max-width: 500px
+      margin-left: auto
+      margin-right: auto
