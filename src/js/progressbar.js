@@ -27,15 +27,23 @@ $(function () {
   const target_block = $('#progress');
   let blockStatus = true;
 
-  let scrollEvent =
-    $(window).scrollTop() > target_block.position().top - $(window).height();
+  const decorator = function (fn) {
+    let scrollEvent;
+    return function () {
+      scrollEvent =
+        $(window).scrollTop() >
+        target_block.position().top - $(window).height();
+      if (scrollEvent && blockStatus) {
+        blockStatus = false;
+        fn();
+      }
+    };
+  };
+
+  animateBar = decorator(animateBar);
+  animateBar();
 
   $(window).scroll(function () {
-    scrollEvent =
-      $(window).scrollTop() > target_block.position().top - $(window).height();
-    if (scrollEvent && blockStatus) {
-      blockStatus = false;
-      animateBar();
-    }
+    animateBar();
   });
 });

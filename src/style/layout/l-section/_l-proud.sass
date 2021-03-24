@@ -21,8 +21,29 @@
     p
       line-height: 1.85em
 
+  &__total
+    position: relative
+
+    span
+      position: relative
+      top: -150px
+      opacity: 0
+      animation: fall 0.75s ease forwards
+      &:first-child
+        animation-delay: 0.1s
+      &:nth-child(2)
+        animation-delay: 0.3s
+  
   &__progressbars
     @include tablet-down
       max-width: 500px
       margin-left: auto
       margin-right: auto
+
+@keyframes fall
+  from
+    opacity: 0
+    top: -150px
+  to
+    opacity: 1
+    top: 0
