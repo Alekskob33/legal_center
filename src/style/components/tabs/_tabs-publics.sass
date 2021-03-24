@@ -19,13 +19,25 @@
       align-items: center
 
   &__nav-item
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
     padding: 13px
     border-radius: 5px 5px 0 0
     font-size: 14px
+    color: darken($grey-x, 12%)
     cursor: pointer
     &.current
       background-color: $brown
       color: $white
+      [class$="__nav-icon"]
+        fill: white
+
+  &__nav-icon
+    display: inline-block
+    margin-bottom: 7px
+    fill: darken($grey-x, 12%)
 
   &__body
     margin-bottom: 30px
