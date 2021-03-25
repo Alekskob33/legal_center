@@ -18,17 +18,26 @@
             <span class="fw600">Мы расскажем что сможем <br>сделать для вас</span>
           </p>
           <label class="field-label mb1">
-            <input type="text" class="field" placeholder="Имя" required>
-            <img src="./img/icons/user.svg" alt="" class="field-label__icon">
+            <div>
+              <input type="text" class="field" placeholder="Имя" required>
+              <img src="./img/icons/user.svg" alt="" class="field-label__icon">
+            </div>
+            <div class="field-label__err hidden">Err: text ...</div>
           </label>
           <label class="field-label mb1">
-            <input type="tel" class="field" placeholder="Ваш телефон" required>
-            <img src="./img/icons/phone.svg" alt="" class="field-label__icon">
+            <div>
+              <input type="tel" class="field" placeholder="Ваш телефон" required>
+              <img src="./img/icons/phone.svg" alt="" class="field-label__icon">
+            </div>
+            <div class="field-label__err hidden">Err: text ...</div>
           </label>
           <label class="field-label t11 mb3">
-            <input type="checkbox" required>
-            <span>Соглашаюсь с </span>
-            <a class="color-brown" href="">Политикой конфиденциальности</a>
+            <div>
+              <input type="checkbox" required>
+              <span>Соглашаюсь с </span>
+              <a class="color-brown" href="">Политикой конфиденциальности</a>
+            </div>
+            <div class="field-label__err hidden">Err: It is required</div>
           </label>
           <button type="submit" class="btn w100">Записаться на консультацию</button>
         </form>
