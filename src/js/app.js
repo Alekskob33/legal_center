@@ -101,3 +101,4 @@ jQuery(function ($) {
 });
 
 @@include('./progressbar.js');
+@@include('./scroll_top.js');
