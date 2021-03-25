@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('chanks/component/head.html')
+<body>
+  <!-- Navbar -->
+  @@include('chanks/component/navbar.html')
+
+  <!-- Content -->
+  <div class="container narrow">
+    <div class="box-search">
+      <!-- Title border center -->
+      <h3 class="title-bd-top text-center mb2e">
+        <span><span>Поиск по разделам</span><input type="text" size="7" readonly></span>
+      </h3>
+      <div class="box-search__row">
+        <div class="box-search__dropdown">
+          <div data-dropdown class="dropdown">
+            <div data-dropdown-btn class="dropdown__btn">
+              Все разделы
+              <svg class="dropdown__btn-icon" width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.44269 9.6761L10.476 4.95348C10.6526 4.74625 10.6526 4.41051 10.476 4.20276C10.2994 3.99554 10.0126 3.99554 9.83601 4.20276L6.1227 8.55079L2.40938 4.20329C2.23279 3.99606 1.94596 3.99606 1.76892 4.20329C1.59233 4.41051 1.59233 4.74677 1.76892 4.954L5.80222 9.67662C5.97699 9.88067 6.26833 9.88067 6.44269 9.6761Z" fill="#777777"/>
+              </svg>
+            </div>
+
+            <div data-dropdown-list class="dropdown__list">
+              <div class="dropdown__item">
+                <form action="">
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Все разделы</span>
+                  </label>
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Услуги</span>
+                  </label>
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Справочник законов</span>
+                  </label>
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Справочник терминов</span>
+                  </label>
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Статьи</span>
+                  </label>
+                  <label class="radio mb1">
+                    <input name="xradio" type="radio">
+                    <i></i>
+                    <span>Блок</span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <input type="text" class="box-search__input search" placeholder="Поиск">
+      </div>
+    </div>
+    <h4 class="t17 fw600 color-grey-x mt3 mb3">Результаты поиска</h4>
+    <div class="mb3">
+      <p class="t17 fw600 text-uppercase color-brown mb2">Абонентская задолженность</p>
+      <p class="t16 mb2">Обязательство потребителя (абонента) оплатить (в установленные льготные сроки) услуги, оказанные предприятиями и организациями коммунального хозяйства и связи.</p>
+      <hr class="hr border-brown">
+    </div>
+    <div class="mb3">
+      <p class="t17 fw600 text-uppercase color-brown mb2">Абонентская задолженность</p>
+      <p class="t16 mb2">Обязательство потребителя (абонента) оплатить (в установленные льготные сроки) услуги, оказанные предприятиями и организациями коммунального хозяйства и связи.</p>
+      <hr class="hr border-brown">
+    </div>
+    <div class="mb3">
+      <p class="t17 fw600 text-uppercase color-brown mb2">Абонентская задолженность</p>
+      <p class="t16 mb2">Обязательство потребителя (абонента) оплатить (в установленные льготные сроки) услуги, оказанные предприятиями и организациями коммунального хозяйства и связи.</p>
+      <hr class="hr border-brown">
+    </div>
+    <div class="mb3">
+      <p class="t17 fw600 text-uppercase color-brown mb2">Абонентская задолженность</p>
+      <p class="t16 mb2">Обязательство потребителя (абонента) оплатить (в установленные льготные сроки) услуги, оказанные предприятиями и организациями коммунального хозяйства и связи.</p>
+      <hr class="hr border-brown">
+    </div>
+    <div class="mb7">
+      @@include('chanks/component/pagination.html')
+    </div>
+  </div>
+
+  @@include('chanks/section/footer.html')
+</body>
+</html>
