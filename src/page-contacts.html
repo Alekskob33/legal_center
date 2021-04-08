@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('chanks/component/head.html')
+<body>
+  <!-- Navbar -->
+  @@include('chanks/component/navbar.html')
+
+  <!-- Content -->
+  @@include('chanks/section/banner/banner-contacts.html')
+
+  <div class="l-address">
+    <div class="container">
+      <div class="l-address__row">
+        <div class="l-address__col">
+          <h4 class="t18 fw600 mb2">Свяжитесь с нами!</h4>
+          <p class="t14 mb3">
+            При возникновении вопросов и предложений Вы можете обратиться к нам, используя форму обратной связи.
+          </p>
+          <div class="mb3">
+            <p class="t17">
+              <img src="./img/icons/maps-and-flags.svg" alt="" class="text-va-middle">&nbsp;
+              <span>г. Москва, Тверская, 16</span>
+            </p>
+            <p class="t17">
+              <img src="./img/icons/call-answer.svg" alt="" class="text-va-middle">&nbsp;
+              <span>+7 (495) 545-93-64</span>
+            </p>
+            <p class="t17 mb3">
+              <img src="./img/icons/close-envelope.svg" alt="" class="text-va-middle">&nbsp;
+              <span>uristmoscow@bk.ru</span>
+            </p>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.648405641187!2d37.60446681593102!3d55.76460968055651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a46d8a4db93%3A0x73b83f637e7fd75a!2z0KLQstC10YDRgdC60LDRjyAxNg!5e0!3m2!1sru!2sru!4v1614000532388!5m2!1sru!2sru" width="100%" height="430" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="l-address__col">
+          <form class="" action="">
+            <label class="field-label mb1">
+              <div>
+                <input type="text" class="field" placeholder="Имя" required>
+                <img src="./img/icons/user.svg" alt="" class="field-label__icon">
+              </div>
+              <div class="field-label__err hidden">Err: text ...</div>
+            </label>
+            <label class="field-label mb1">
+              <div>
+                <input type="tel" class="field" placeholder="Ваш телефон" required>
+                <img src="./img/icons/phone.svg" alt="" class="field-label__icon">
+              </div>
+              <div class="field-label__err hidden">Err: text ...</div>
+            </label>
+            <label class="field-label mb2">
+              <div>
+                <input type="email" class="field" placeholder="Ваш email" required>
+                <img src="./img/icons/mail.svg" alt="" class="field-label__icon">
+              </div>
+              <div class="field-label__err hidden">Err: text ...</div>
+            </label>
+            <label class="field-label mb7">
+              <div>
+                <input type="text" class="field" placeholder="Тема вопроса" required>
+              </div>
+              <div class="field-label__err hidden">Err: text ...</div>
+            </label>
+            <label class="field-label mb3">
+              <div>
+                <textarea rows="14" class="field field-textarea bg-grey pl2 pr2" placeholder="Здравствуте, у меня к Вам вопрос ..." required></textarea>
+              </div>
+            </label>
+            <!-- <label class="field-label t11 mb3">
+              <div>
+                <input type="checkbox" required>
+                <span>Соглашаюсь с </span>
+                <a class="color-brown" href="">Политикой конфиденциальности</a>
+              </div>
+              <div class="field-label__err hidden">Err: It is required</div>
+            </label> -->
+            <button type="submit" class="btn">Отправить</button>
+          </form>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('chanks/section/footer.html')
+</body>
+</html>

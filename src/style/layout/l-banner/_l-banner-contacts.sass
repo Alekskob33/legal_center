@@ -1,0 +1,25 @@
+.l-banner-contacts
+  @include l-banner
+
+  &__text
+    max-width: 337px
+
+  .container
+    padding-top: 50px
+    padding-bottom: 50px
+    background-position: right center
+    background-repeat: no-repeat
+    background-image: url(../img/bg/bg-banner-contacts.jpg)
+    background-size: contain
+
+    @include tablet-up
+      padding-top: 90px
+      padding-bottom: 90px
+    @include tablet-down
+      padding-top: 30px
+      padding-bottom: 30px
+    @include phone-wide
+      padding-top: 0
+      padding-bottom: 236px
+      background-size: 316px
+      background-position: bottom center
