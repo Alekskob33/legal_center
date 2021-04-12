@@ -1,16 +1,16 @@
-$("#carousel-lawyers").slick({
+$('#carousel-lawyers').slick({
   dots: true,
   infinite: false,
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
   arrows: false,
-  appendDots: $("#carousel-lawyers-dots"),
-  dotsClass: "carousel-dots",
+  appendDots: $('#carousel-lawyers-dots'),
+  dotsClass: 'carousel-dots',
   responsive: [
     {
-      breakpoint: 1920,
-      settings: "unslick",
+      breakpoint: 3000,
+      settings: 'unslick',
     },
     {
       breakpoint: 979,
