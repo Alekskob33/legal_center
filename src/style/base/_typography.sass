@@ -10,10 +10,15 @@ $font-root: 14px
 
 // Titles
 .page-title
+	display: inline-block
 	font-weight: 700
 	@include text-responsive(50, 24, 1.2)
-	@include text-gradient(linear-gradient(90deg, #85410c 0%, #da955c 0%, #da955c 0%))
-	text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25)
+	@include text-gradient(linear-gradient(to right,#965f34,#f3b581))
+	text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	text-shadow: 0 3px 5px rgba(#000, 0.25)
+	-webkit-font-smoothing: antialiased
 	@include phone-wide
 		text-shadow: none
 
